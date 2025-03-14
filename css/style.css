@@ -1,0 +1,281 @@
+/* Regular (weight 400) */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+        url('../fonts/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Medium (weight 500) */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.woff2') format('woff2'),
+        url('../fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Bold (weight 700) */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.woff2') format('woff2'),
+        url('../fonts/Inter-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+/*.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}*/
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
+
+.one__block-img {
+    width: 1703px;
+    width: 100%;
+    height: 972px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Убедитесь, что оно выше слоев параллакса */
+    pointer-events: none;
+}
+
+.parallax {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax__layer {
+    background-image: url('/img/Фон.jpg');
+}
+
+
+/*one*/
+
+.one__container {
+    max-width: 1920px;
+    width: 100%;
+    min-height: 1080px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Фиксируем фон для параллакс-эффекта */
+}
+
+.one__img {
+    display: block;
+    max-width: 968px;
+    width: 100%;
+    min-height: 972px;
+    padding-top: 107px;
+}
+
+.one-yellow-svg,
+.one-two-yellow-svg {
+    width: 10px;
+    height: 10px;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26.63px;
+    color: #FFFFFF;
+}
+
+.one__link-1,
+.one__link-3 {
+    align-items: center;
+    gap: 8px;
+}
+
+.one__link-2 {
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.one__list-items {
+    max-width: 453px;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 380px;
+}
+
+.one__item-1 {
+    padding-left: 190px;
+    margin-bottom: 153px;
+}
+
+.one__item-2 {
+    margin-right: -74px;
+    justify-content: flex-end;
+    margin-bottom: 185px;
+}
+
+.one__item-3 {
+    padding-left: 109px;
+}
+
+/* one-two */
+
+.one-two__link-1,
+.one-two__link-2,
+.one-two__link-3 {
+    gap: 8px;
+}
+
+.link-cursor {
+    pointer-events: auto;
+}
+
+.one-two__item-1 {
+    margin-bottom: 121px;
+}
+
+.one-two__item-2 {
+    margin-bottom: 439px;
+}
+
+.one-two__list-items {
+    max-width: 415px;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 108px;
+}
+
+.one-two__item-1 {
+    margin-left: -300px;
+}
+
+.one-two__item-2 {
+    padding-right: 76px;
+}
+
+.one-two__item-3 {
+    margin-left: -70px;
+}
+
+.one-two__link-1,
+.one-two__link-2,
+.one-two__link-3 {
+    align-items: center;
+}
+
+/*game*/
+.game__container {
+    max-width: 1920px;
+    width: 100%;
+    min-height: 1080px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/Фон.jpg);
+    display: flex;
+    justify-content: center;
+}
+
+.game__list-items {
+    display: flex;
+    flex-wrap: wrap; /* Перенос элементов на новые строки */
+    gap: 18.93px; /* Отступ между элементами */
+    width: 1019px; /* Фиксированная ширина */
+    height: auto; /* Автоматическая высота */
+    align-content: flex-start; /* Убираем возможные пустоты снизу */
+}
+
+.game__item {
+    flex: 1 1 calc((1019px - (3 * 18.93px)) / 4); /* 4 элемента в строке с учетом gap */
+    max-width: calc((1019px - (3 * 18.93px)) / 4);
+}
+
+.game__image {
+    width: 100%; /* Занимает всю ширину родительского элемента */
+    height: auto; /* Автоматически подстраивается */
+    display: block;
+}
+
+/*вернуться*/
+
+.game__back-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    left: 20px;
+    bottom: -120px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 22px;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: background-color 0.3s;
+}
+
+.game__back-button:hover {
+    color: #F5EE1A;
+}
+
+.game__img-home {
+    width: 25px;
+    height: 25px;
+}
