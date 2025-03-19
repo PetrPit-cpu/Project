@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (JSON.stringify(currentOrder) === JSON.stringify(correctOrder)) {
             list.style.gap = '0px'; // Убираем расстояния
         } else {
-            list.style.gap = '18.93px'; // Возвращаем, если пазл разобран
+            list.style.gap = '15px'; // Возвращаем, если пазл разобран
         }
     }
 });

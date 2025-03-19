@@ -37,4 +37,33 @@ document.addEventListener('DOMContentLoaded', () => {
         initialMouseY = null;
     });
 
+
+
+
+
+    //для скрытия прелоадера и параллакса:
+    const preloader = document.querySelector(".preloader");
+    const images = document.querySelectorAll(".preloader-img");
+
+    // Функция для удаления прелоадера после загрузки страницы
+    function hidePreloader() {
+        images.forEach(img => {
+            const direction = img.classList.contains("preloader-top-left") ? "-300px, -300px" :
+                              img.classList.contains("preloader-top-center") ? "0px, -300px" :
+                              img.classList.contains("preloader-top-right") ? "300px, -300px" :
+                              img.classList.contains("preloader-bottom-left") ? "-300px, 300px" :
+                              img.classList.contains("preloader-bottom-center") ? "0px, 300px" :
+                              "300px, 300px";
+
+            img.style.transform = `translate(${direction})`;
+        });
+
+        setTimeout(() => {
+            preloader.classList.add("hidden"); // Плавно скрываем прелоадер
+        }, 1500);
+    }
+
+    // Запускаем скрытие прелоадера после загрузки контента
+    window.addEventListener("load", hidePreloader);
+
 });

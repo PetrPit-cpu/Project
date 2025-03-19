@@ -31,7 +31,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: black;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -68,13 +68,6 @@ h4 {
     margin: 0 auto;
 }
 
-/*.page-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}*/
-
 .parallax__layer {
     position: absolute;
     top: 0;
@@ -94,7 +87,8 @@ h4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2; /* Убедитесь, что оно выше слоев параллакса */
+    z-index: 2;
+    /* Убедитесь, что оно выше слоев параллакса */
     pointer-events: none;
 }
 
@@ -109,17 +103,60 @@ h4 {
     background-image: url('/img/Фон.jpg');
 }
 
+/* Прелоадер */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 9999; /* Устанавливаем поверх всего */
+    transition: opacity 1s ease-out;
+}
+
+/* Стили картинок в прелоадере */
+.preloader-img {
+    position: absolute;
+    width: 35%; /* Размер изображений */
+    transition: transform 2.5s ease-out;
+}
+
+/* Верхние изображения */
+.preloader-top-left { top: 0; left: 0; }
+.preloader-top-center { top: 0; left: 50%; transform: translateX(-50%); }
+.preloader-top-right { top: 0; right: 0; }
+
+/* Нижние изображения */
+.preloader-bottom-left { bottom: 0; left: 0; }
+.preloader-bottom-center { bottom: 0; left: 50%; transform: translateX(-50%); }
+.preloader-bottom-right { bottom: 0; right: 0; }
+
+/* Прелоадер исчезает после загрузки */
+.preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
 
 /*one*/
 
-.one__container {
+/*.one__container {
     max-width: 1920px;
     width: 100%;
     min-height: 1080px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed; /* Фиксируем фон для параллакс-эффекта */
+    background-attachment: fixed;
+    /* Фиксируем фон для параллакс-эффекта */
+/*}*/
+
+.one__block-img {
+    justify-content: center;
 }
 
 .one__img {
@@ -222,35 +259,49 @@ h4 {
 }
 
 /*game*/
+
 .game__container {
+    display: flex;
+    justify-content: center;
+}
+
+.game__section {
     max-width: 1920px;
     width: 100%;
     min-height: 1080px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../img/Фон.jpg);
+    background-image: url(/img/Фон.jpg);
     display: flex;
     justify-content: center;
 }
 
 .game__list-items {
     display: flex;
-    flex-wrap: wrap; /* Перенос элементов на новые строки */
-    gap: 18.93px; /* Отступ между элементами */
-    width: 1019px; /* Фиксированная ширина */
-    height: auto; /* Автоматическая высота */
-    align-content: flex-start; /* Убираем возможные пустоты снизу */
+    flex-wrap: wrap;
+    /* Перенос элементов на новые строки */
+    gap: 18.93px;
+    /* Отступ между элементами */
+    width: 1019px;
+    /* Фиксированная ширина */
+    height: auto;
+    /* Автоматическая высота */
+    align-content: flex-start;
+    /* Убираем возможные пустоты снизу */
+    padding: 40px 0 40px;
 }
 
 .game__item {
-    flex: 1 1 calc((1019px - (3 * 18.93px)) / 4); /* 4 элемента в строке с учетом gap */
+    flex: 1 1 calc((1019px - (3 * 18.93px)) / 4);
+    /* 4 элемента в строке с учетом gap */
     max-width: calc((1019px - (3 * 18.93px)) / 4);
 }
 
 .game__image {
-    width: 100%; /* Занимает всю ширину родительского элемента */
-    height: auto; /* Автоматически подстраивается */
+    max-width: 225.55px;
+    width: 100%;
+    min-height: 236.86px;
     display: block;
 }
 
@@ -262,11 +313,10 @@ h4 {
     gap: 5px;
     position: absolute;
     left: 20px;
-    bottom: -120px;
+    bottom: -137px;
     text-decoration: none;
     color: #FFFFFF;
     font-size: 22px;
-    border-radius: 5px;
     font-weight: 400;
     transition: background-color 0.3s;
 }
@@ -278,4 +328,148 @@ h4 {
 .game__img-home {
     width: 25px;
     height: 25px;
+}
+
+/*dress*/
+
+.dress__img-1,
+.dress__img-6,
+.dress__img-11 {
+    max-width: 196.1px;
+    width: 100%;
+    min-height: 244.2px;
+}
+
+.dress__img-2,
+.dress__img-7,
+.dress__img-12 {
+    max-width: 127.05px;
+    width: 100%;
+    min-height: 197.3px;
+}
+
+.dress__img-3,
+.dress__img-8,
+.dress__img-13 {
+    max-width: 214.8px;
+    width: 100%;
+    min-height: 443.7px;
+}
+
+.dress__img-4,
+.dress__img-9,
+.dress__img-14 {
+    max-width: 179.3px;
+    width: 100%;
+    min-height: 625.8px;
+}
+
+.dress__img-5,
+.dress__img-10,
+.dress__img-15 {
+    max-width: 214.8px;
+    width: 100%;
+    min-height: 466.7px;
+}
+
+.dress__img-20 {
+    max-width: 379.3px;
+    width: 100%;
+    min-height: 232.21px;
+}
+
+.dress-element-1 {
+    margin-top: -95px;
+    padding-left: 7px;
+}
+
+.dress-element-2 {
+    margin-top: -107px;
+    margin-left: -55px;
+}
+
+.dress-element-3 {
+    margin-top: -263px;
+    margin-left: -46px;
+}
+
+.dress-element-4 {
+    margin-top: -184px;
+    margin-left: -63px;
+}
+
+.dress__list-items-block-2 {
+    max-width: 295px;
+    width: 100%;
+}
+
+.dress__list-items-block-3 {
+    max-width: 295px;
+    width: 100%;
+}
+
+.dress__back-button {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 22px;
+    padding-left: 21px;
+    margin-bottom: 13px;
+    gap: 5px;
+    align-items: center;
+}
+
+.dress-element-5 {
+    margin-top: -180px;
+    margin-left: -61px;
+}
+
+.dress__main {
+    gap: 172.7px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Устанавливаем поверх фона */
+    padding-top: 225px;
+}
+
+.wrapper-d {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%; /* Немного больше, чтобы не было черных краев */
+    height: 120%;
+    background: url("/img/Фон_FlyRug.jpg") no-repeat center center;
+    background-size: cover;
+    transition: transform 0.1s linear; /* Плавное движение */
+    z-index: -1; /* Убираем фон за основной контент */
+}
+
+.dress__section {
+    position: relative;
+    width: 100%;
+    min-height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dress__link {
+    transform: translateX(-290px);
+}
+
+.dress__main img {
+    cursor: pointer; /* Делает курсор в виде руки (как при ссылке) */
+}
+
+.dress__main img:hover {
+    cursor: pointer; /* Изменяет курсор на прицел при наведении */
 }
