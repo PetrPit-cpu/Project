@@ -128,7 +128,7 @@ h4 {
 /* Стили картинок в прелоадере */
 .preloader-img {
     position: absolute;
-    width: 35%;
+    width: 50%;
     /* Размер изображений */
     transition: transform 2.5s ease-out;
 }
@@ -361,47 +361,49 @@ h4 {
 .dress__img-1,
 .dress__img-6,
 .dress__img-11 {
-    max-width: 196.1px;
+    max-width: 169.96px;
     width: 100%;
-    min-height: 244.2px;
+    min-height: 211.6px;
 }
 
 .dress__img-2,
 .dress__img-7,
 .dress__img-12 {
-    max-width: 127.05px;
+    max-width: 102.92px;
     width: 100%;
-    min-height: 197.3px;
+    min-height: 170.46px;
 }
+
 
 .dress__img-3,
 .dress__img-8,
 .dress__img-13 {
-    max-width: 214.8px;
+    max-width: 186.15px;
     width: 100%;
-    min-height: 443.7px;
+    min-height: 384.41px;
 }
 
 .dress__img-4,
 .dress__img-9,
 .dress__img-14 {
-    max-width: 179.3px;
+    max-width: 155.39px;
     width: 100%;
-    min-height: 625.8px;
+    min-height: 542.18px;
 }
+
 
 .dress__img-5,
 .dress__img-10,
 .dress__img-15 {
-    max-width: 214.8px;
+    max-width: 186.15px;
     width: 100%;
-    min-height: 466.7px;
+    min-height: 404.34px;
 }
 
 .dress__img-20 {
-    max-width: 379.3px;
+    max-width: 328.59px;
     width: 100%;
-    min-height: 232.21px;
+    min-height: 201.17px;
 }
 
 .dress-element-1 {
@@ -410,18 +412,18 @@ h4 {
 }
 
 .dress-element-2 {
-    margin-top: -107px;
+    margin-top: -102px;
     margin-left: -55px;
 }
 
 .dress-element-3 {
-    margin-top: -263px;
-    margin-left: -46px;
+    margin-top: -243px;
+    margin-left: -54px;
 }
 
 .dress-element-4 {
-    margin-top: -184px;
-    margin-left: -63px;
+    margin-top: -160px;
+    margin-left: -54px;
 }
 
 .dress__list-items-block-2 {
@@ -435,6 +437,9 @@ h4 {
 }
 
 .dress__back-button {
+    position: absolute; /* Фиксируем относительно dress__section */
+    bottom: 0px; /* Отступ от нижнего края */
+    left: -406px; /* Отступ от левого края */
     color: #FFFFFF;
     font-weight: 400;
     font-size: 22px;
@@ -449,8 +454,8 @@ h4 {
 }
 
 .dress-element-5 {
-    margin-top: -220px;
-    margin-left: -66px;
+    margin-top: -195px;
+    margin-left: -75px;
 }
 
 .dress__main {
@@ -460,7 +465,7 @@ h4 {
     position: relative;
     z-index: 1;
     /* Устанавливаем поверх фона */
-
+    padding-top: 10px;
 }
 
 .wrapper-d {
@@ -476,9 +481,10 @@ h4 {
     position: absolute;
     top: 0;
     left: 0;
+    max-width: 1920px;
     width: 100%;
     /* Немного больше, чтобы не было черных краев */
-    height: 100%;
+    min-height: 1080px;
     background: url("/img/Фон_FlyRug.jpg") no-repeat center center;
     background-size: cover;
     transition: transform 0.1s linear;
@@ -498,7 +504,7 @@ h4 {
 
 .dress__link {
     align-items: end;
-    transform: translateX(-214px);
+    transform: translate(-324px, 123px);
 }
 
 .dress__main img {

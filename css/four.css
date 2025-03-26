@@ -1,0 +1,42 @@
+/*.container {
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../img/Фон.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.four__flex-green-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.four__block-center {
+    display: flex;
+    justify-content: space-between;
+}
+
+.four__left-img {
+    width: 500px;
+    height: 500px;
+}
+
+.four__strelka-left {
+    width: 500px;
+    height: 500px;
+}
+
+.four__center-img {
+    width: 500px;
+    height: 500px;
+}
+
+.four__strelka-right {
+    width: 500px;
+    height: 500px;
+}
+
+.four__right-img {
+    width: 500px;
+    height: 500px;
+}*/

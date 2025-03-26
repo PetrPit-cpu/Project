@@ -48,12 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Функция для удаления прелоадера после загрузки страницы
     function hidePreloader() {
         images.forEach(img => {
-            const direction = img.classList.contains("preloader-top-left") ? "-300px, -300px" :
-                              img.classList.contains("preloader-top-center") ? "0px, -300px" :
-                              img.classList.contains("preloader-top-right") ? "300px, -300px" :
-                              img.classList.contains("preloader-bottom-left") ? "-300px, 300px" :
-                              img.classList.contains("preloader-bottom-center") ? "0px, 300px" :
-                              "300px, 300px";
+            const direction = img.classList.contains("preloader-top-left") ? "-500px, -500px" :
+                              img.classList.contains("preloader-top-center") ? "0px, -500px" :
+                              img.classList.contains("preloader-top-right") ? "500px, -500px" :
+                              img.classList.contains("preloader-bottom-left") ? "-500px, 500px" :
+                              img.classList.contains("preloader-bottom-center") ? "0px, 500px" :
+                              "500px, 500px";
 
             img.style.transform = `translate(${direction})`;
         });
