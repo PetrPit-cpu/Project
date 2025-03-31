@@ -158,5 +158,60 @@ document.addEventListener("DOMContentLoaded", function () {
         "./img/Платье-double-3.5/4.svg": { src: "./img/Платье-3/6.svg" }, // Возвращаемся к первому
 
     }
+
+    if (window.innerWidth <= 1299) {
+        // Карта стилей: класс -> {width, height}
+        const dressSizesMap = {
+            '.dress__img-1': { width: 121.02, height: 150.66 },
+            '.dress__img-6': { width: 121.02, height: 150.66 },
+            '.dress__img-11': { width: 121.02, height: 150.66 },
+
+            '.dress__img-2': { width: 78.37, height: 121.72 },
+            '.dress__img-7': { width: 78.37, height: 121.72 },
+            '.dress__img-12': { width: 78.37, height: 121.72 },
+
+            '.dress__img-3': { width: 132.54, height: 273.71 },
+            '.dress__img-8': { width: 132.54, height: 273.71 },
+            '.dress__img-13': { width: 132.54, height: 273.71 },
+
+            '.dress__img-4': { width: 110.64, height: 386.04 },
+            '.dress__img-9': { width: 110.64, height: 386.04 },
+            '.dress__img-14': { width: 110.64, height: 386.04 },
+
+            '.dress__img-5': { width: 132.54, height: 287.9 },
+            '.dress__img-10': { width: 132.54, height: 287.9 },
+            '.dress__img-15': { width: 132.54, height: 287.9 },
+
+            '.dress__img-20': { width: 233.97, height: 143.24 }
+        };
+
+        for (const className in dressSizesMap) {
+            const elements = document.querySelectorAll(className);
+            elements.forEach(el => {
+                el.style.maxWidth = `${dressSizesMap[className].width}px`;
+                el.style.width = `${dressSizesMap[className].width}px`;
+                el.style.minHeight = `${dressSizesMap[className].height}px`;
+            });
+        }
+
+        // Отдельно обработаем dress-element-* отступы:
+        const dressOffsets = {
+            '.dress-element-1': { marginTop: -63, marginLeft: null, paddingLeft: 7 },
+            '.dress-element-2': { marginTop: -72, marginLeft: -42 },
+            '.dress-element-3': { marginTop: -163, marginLeft: -35 },
+            '.dress-element-4': { marginTop: -115, marginLeft: -38 },
+            '.dress-element-5': { marginTop: -144, marginLeft: -50 },
+        };
+
+        for (const className in dressOffsets) {
+            const el = document.querySelector(className);
+            if (el) {
+                const offset = dressOffsets[className];
+                if (offset.marginTop !== null) el.style.marginTop = `${offset.marginTop}px`;
+                if (offset.marginLeft !== null) el.style.marginLeft = `${offset.marginLeft}px`;
+                if (offset.paddingLeft !== undefined) el.style.paddingLeft = `${offset.paddingLeft}px`;
+            }
+        }
+    }
 });
 

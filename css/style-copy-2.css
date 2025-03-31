@@ -1,0 +1,580 @@
+/* Regular (weight 400) */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+        url('../fonts/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Medium (weight 500) */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.woff2') format('woff2'),
+        url('../fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Bold (weight 700) */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.woff2') format('woff2'),
+        url('../fonts/Inter-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
+
+.one__block-img {
+    width: 1703px;
+    width: 100%;
+    height: 972px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* Убедитесь, что оно выше слоев параллакса */
+    pointer-events: none;
+}
+
+.parallax {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax__layer {
+    background-image: url('/img/Фон.jpg');
+}
+
+/* Прелоадер */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 9999;
+    /* Устанавливаем поверх всего */
+    transition: opacity 1s ease-out;
+}
+
+/* Стили картинок в прелоадере */
+.preloader-img {
+    position: absolute;
+    width: 50%;
+    /* Размер изображений */
+    transition: transform 2.5s ease-out;
+}
+
+/* Верхние изображения */
+.preloader-top-left {
+    top: 0;
+    left: 0;
+}
+
+.preloader-top-center {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.preloader-top-right {
+    top: 0;
+    right: 0;
+}
+
+/* Нижние изображения */
+.preloader-bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.preloader-bottom-center {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.preloader-bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+/* Прелоадер исчезает после загрузки */
+.preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/*one*/
+
+.one__block-img {
+    justify-content: center;
+}
+
+.one__img {
+    display: block;
+    max-width: 968px;
+    width: 100%;
+    min-height: 972px;
+    padding-top: 107px;
+}
+
+.one-yellow-svg,
+.one-two-yellow-svg {
+    width: 10px;
+    height: 10px;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26.63px;
+    color: #FFFFFF;
+}
+
+.one__link-1,
+.one__link-3 {
+    align-items: center;
+    gap: 8px;
+}
+
+.one__link-2 {
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.one__list-items {
+    max-width: 453px;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 380px;
+}
+
+.one__item-1 {
+    padding-left: 190px;
+    margin-bottom: 153px;
+}
+
+.one__item-2 {
+    margin-right: -74px;
+    justify-content: flex-end;
+    margin-bottom: 185px;
+}
+
+.one__item-3 {
+    padding-left: 109px;
+}
+
+/* one-two */
+
+.one-two__link-1,
+.one-two__link-2,
+.one-two__link-3 {
+    gap: 8px;
+}
+
+.link-cursor {
+    pointer-events: auto;
+}
+
+.one-two__item-1 {
+    margin-bottom: 121px;
+}
+
+.one-two__item-2 {
+    margin-bottom: 439px;
+}
+
+.one-two__list-items {
+    max-width: 415px;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 108px;
+}
+
+.one-two__item-1 {
+    margin-left: -300px;
+}
+
+.one-two__item-2 {
+    padding-right: 76px;
+}
+
+.one-two__item-3 {
+    margin-left: -70px;
+}
+
+.one-two__link-1,
+.one-two__link-2,
+.one-two__link-3 {
+    align-items: center;
+}
+
+/*game*/
+
+.game__container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+}
+
+.game__section {
+    /*max-width: 1920px;*/
+    width: 100%;
+    min-height: 1080px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/img/Фон.jpg);
+    display: flex;
+    justify-content: center;
+}
+
+.game__list-items {
+    display: flex;
+    flex-wrap: wrap;
+    /* Перенос элементов на новые строки */
+    gap: 15px;
+    /* Отступ между элементами */
+    width: 825px;
+    /* Фиксированная ширина */
+    height: auto;
+    /* Автоматическая высота */
+    align-content: flex-start;
+    /* Убираем возможные пустоты снизу */
+    padding: 40px 0 40px;
+}
+
+.game__item {
+    flex: 1 1 calc((825px - (3 * 15px)) / 4);
+    /* 4 элемента в строке с учетом gap */
+    max-width: calc((825px - (3 * 15px)) / 4);
+}
+
+.game__image {
+    max-width: 195.55px;
+    width: 100%;
+    min-height: 206.86px;
+    display: block;
+}
+
+/*вернуться*/
+
+.game__back-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    left: 20px;
+    /*bottom: -20px;*/
+    padding-bottom: 40px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 400;
+    transition: background-color 0.3s;
+}
+
+.game__back-button:hover {
+    color: #F5EE1A;
+}
+
+.game__img-home {
+    width: 25px;
+    height: 25px;
+}
+
+.content__block {
+    flex-direction: row-reverse;
+}
+
+/*dress*/
+
+.dress__img-1,
+.dress__img-6,
+.dress__img-11 {
+    max-width: 169.96px;
+    width: 100%;
+    min-height: 211.6px;
+}
+
+.dress__img-2,
+.dress__img-7,
+.dress__img-12 {
+    max-width: 102.92px;
+    width: 100%;
+    min-height: 170.46px;
+}
+
+
+.dress__img-3,
+.dress__img-8,
+.dress__img-13 {
+    max-width: 186.15px;
+    width: 100%;
+    min-height: 384.41px;
+}
+
+.dress__img-4,
+.dress__img-9,
+.dress__img-14 {
+    max-width: 155.39px;
+    width: 100%;
+    min-height: 542.18px;
+}
+
+
+.dress__img-5,
+.dress__img-10,
+.dress__img-15 {
+    max-width: 186.15px;
+    width: 100%;
+    min-height: 404.34px;
+}
+
+.dress__img-20 {
+    max-width: 328.59px;
+    width: 100%;
+    min-height: 201.17px;
+}
+
+.dress-element-1 {
+    margin-top: -95px;
+    padding-left: 7px;
+}
+
+.dress-element-2 {
+    margin-top: -102px;
+    margin-left: -55px;
+}
+
+.dress-element-3 {
+    margin-top: -243px;
+    margin-left: -54px;
+}
+
+.dress-element-4 {
+    margin-top: -160px;
+    margin-left: -54px;
+}
+
+.dress__list-items-block-2 {
+    max-width: 295px;
+    width: 100%;
+}
+
+.dress__list-items-block-3 {
+    max-width: 295px;
+    width: 100%;
+}
+
+.dress__back-button {
+    position: absolute;
+    /* Фиксируем относительно dress__section */
+    bottom: 0px;
+    /* Отступ от нижнего края */
+    left: -406px;
+    /* Отступ от левого края */
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 22px;
+    padding-left: 21px;
+    margin-bottom: 32px;
+    gap: 5px;
+    align-items: center;
+}
+
+.dress__back-button:hover {
+    color: #F5EE1A;
+}
+
+.dress-element-5 {
+    margin-top: -195px;
+    margin-left: -75px;
+}
+
+.dress__main {
+    gap: 172.7px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    /* Устанавливаем поверх фона */
+    padding-top: 10px;
+}
+
+.wrapper-d {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 1920px;
+    width: 100%;
+    /* Немного больше, чтобы не было черных краев */
+    min-height: 1080px;
+    background: url("/img/Фон_FlyRug.jpg") no-repeat center center;
+    background-size: cover;
+    transition: transform 0.1s linear;
+    /* Плавное движение */
+    z-index: -1;
+    /* Убираем фон за основной контент */
+}
+
+.dress__section {
+    position: relative;
+    width: 100%;
+    min-height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dress__link {
+    align-items: end;
+    transform: translate(-324px, 123px);
+}
+
+.dress__main img {
+    cursor: pointer;
+    /* Делает курсор в виде руки (как при ссылке) */
+}
+
+.dress__main img:hover {
+    cursor: pointer;
+    /* Изменяет курсор на прицел при наведении */
+}
+
+@media (max-width: 1176px) {
+    .game__back-button {
+        position: relative;
+        left: 0;
+        margin-right: auto;
+    }
+
+    .game__container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 900px) {
+    .game__image {
+        max-width: 95px;
+        min-height: 106px;
+    }
+
+    .game__item {
+        flex: 0 0 95px;
+        width: 95px;
+        height: 106px;
+        max-width: 95px;
+    }
+
+    .game__list-items {
+        width: 426px;
+    }
+
+    .game__section {
+        align-items: center;
+        /*min-height: 750px;*/
+    }
+}
+
+@media (max-width: 454px) {
+    .game__image {
+        max-width: 75px;
+        min-height: 86px;
+    }
+
+    .game__item {
+        flex: 0 0 75px;
+        width: 75px;
+        height: 86px;
+        max-width: 75px;
+    }
+
+    .game__section {
+        min-height: 750px;
+    }
+
+    .game__list-items {
+        width: 347px;
+    }
+}
+

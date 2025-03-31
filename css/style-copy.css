@@ -437,9 +437,12 @@ h4 {
 }
 
 .dress__back-button {
-    position: absolute; /* Фиксируем относительно dress__section */
-    bottom: 0px; /* Отступ от нижнего края */
-    left: -406px; /* Отступ от левого края */
+    position: absolute;
+    /* Фиксируем относительно dress__section */
+    bottom: 0px;
+    /* Отступ от нижнего края */
+    left: -406px;
+    /* Отступ от левого края */
     color: #FFFFFF;
     font-weight: 400;
     font-size: 22px;
@@ -515,4 +518,141 @@ h4 {
 .dress__main img:hover {
     cursor: pointer;
     /* Изменяет курсор на прицел при наведении */
+}
+
+
+@media (max-width: 1891px) {
+    .dress__back-button {
+        left: -100px;
+    }
+}
+
+@media (max-width: 1641px) {
+    .dress__section {
+        min-height: 920px;
+    }
+
+    .dress__back-button {
+        left: -100px;
+    }
+}
+
+@media (max-width: 1299px) {
+    .dress__back-button {
+        position: relative;
+    }
+
+    .dress__section {
+        flex-direction: column;
+    }
+
+    .dress__back-button {
+        margin-right: auto;
+    }
+
+    .game__img-home {
+        padding-left: 20px;
+    }
+
+    .dress__main {
+        gap: 55px;
+    }
+
+    .wrapper-d {
+        height: 100%;
+    }
+
+    .parallax-bg {
+        min-height: 980px;
+    }
+
+    .dress__img-1, .dress__img-6, .dress__img-11 {
+        max-width: 121.02px;
+        width: 100%;
+        min-height: 150.66px;
+    }
+
+    .dress__img-2, .dress__img-7, .dress__img-12 {
+        max-width: 78.37px;
+        width: 100%;
+        min-height: 121.72px;
+    }
+
+    .dress__img-3, .dress__img-8, .dress__img-13 {
+        max-width: 132.54px;
+        width: 100%;
+        min-height: 273.71px;
+    }
+
+    .dress__img-4, .dress__img-9, .dress__img-14 {
+        max-width: 110.64px;
+        width: 100%;
+        min-height: 386.04px;
+    }
+
+    .dress__img-5, .dress__img-10, .dress__img-15 {
+        max-width: 132.54px;
+        width: 100%;
+        min-height: 287.9px;
+
+    }
+
+    .dress__img-20 {
+        max-width: 233.97px;
+        width: 100%;
+        min-height: 143.24px;
+    }
+
+    .dress-element-2 {
+        margin-top: -72px;
+        margin-left: -42px;
+    }
+
+    .dress-element-1 {
+        margin-top: -63px;
+        padding-left: 7px;
+    }
+
+    .dress-element-3 {
+        margin-top: -163px;
+        margin-left: -35px;
+    }
+
+    .dress-element-4 {
+        margin-top: -115px;
+        margin-left: -38px;
+    }
+
+    .dress-element-5 {
+        margin-top: -144px;
+        margin-left: -50px;
+    }
+}
+
+@media (max-width: 791px) {
+    .game__img-home {
+        padding-left: 40px;
+    }
+
+    .dress__main {
+        flex-direction: column;
+        padding-top: 200px;
+        gap: 160px;
+    }
+
+    .parallax-bg {
+        min-height: 1954px;
+    }
+
+    .dress__back-button {
+        padding-left: 0;
+    }
+
+    .game__img-home {
+        padding-left: 0px;
+    }
+
+    .dress__back-button {
+        margin-right: 0
+    }
 }

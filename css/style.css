@@ -115,26 +115,52 @@ h4 {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    z-index: 9999; /* Устанавливаем поверх всего */
+    z-index: 9999;
+    /* Устанавливаем поверх всего */
     transition: opacity 1s ease-out;
 }
 
 /* Стили картинок в прелоадере */
 .preloader-img {
     position: absolute;
-    width: 35%; /* Размер изображений */
+    width: 35%;
+    /* Размер изображений */
     transition: transform 2.5s ease-out;
 }
 
 /* Верхние изображения */
-.preloader-top-left { top: 0; left: 0; }
-.preloader-top-center { top: 0; left: 50%; transform: translateX(-50%); }
-.preloader-top-right { top: 0; right: 0; }
+.preloader-top-left {
+    top: 0;
+    left: 0;
+}
+
+.preloader-top-center {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.preloader-top-right {
+    top: 0;
+    right: 0;
+}
 
 /* Нижние изображения */
-.preloader-bottom-left { bottom: 0; left: 0; }
-.preloader-bottom-center { bottom: 0; left: 50%; transform: translateX(-50%); }
-.preloader-bottom-right { bottom: 0; right: 0; }
+.preloader-bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.preloader-bottom-center {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.preloader-bottom-right {
+    bottom: 0;
+    right: 0;
+}
 
 /* Прелоадер исчезает после загрузки */
 .preloader.hidden {
@@ -143,17 +169,6 @@ h4 {
 }
 
 /*one*/
-
-/*.one__container {
-    max-width: 1920px;
-    width: 100%;
-    min-height: 1080px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    /* Фиксируем фон для параллакс-эффекта */
-/*}*/
 
 .one__block-img {
     justify-content: center;
@@ -428,7 +443,8 @@ h4 {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 1; /* Устанавливаем поверх фона */
+    z-index: 1;
+    /* Устанавливаем поверх фона */
     padding-top: 225px;
 }
 
@@ -445,12 +461,15 @@ h4 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 120%; /* Немного больше, чтобы не было черных краев */
+    width: 120%;
+    /* Немного больше, чтобы не было черных краев */
     height: 120%;
     background: url("/img/Фон_FlyRug.jpg") no-repeat center center;
     background-size: cover;
-    transition: transform 0.1s linear; /* Плавное движение */
-    z-index: -1; /* Убираем фон за основной контент */
+    transition: transform 0.1s linear;
+    /* Плавное движение */
+    z-index: -1;
+    /* Убираем фон за основной контент */
 }
 
 .dress__section {
@@ -467,9 +486,131 @@ h4 {
 }
 
 .dress__main img {
-    cursor: pointer; /* Делает курсор в виде руки (как при ссылке) */
+    cursor: pointer;
+    /* Делает курсор в виде руки (как при ссылке) */
 }
 
 .dress__main img:hover {
-    cursor: pointer; /* Изменяет курсор на прицел при наведении */
+    cursor: pointer;
+    /* Изменяет курсор на прицел при наведении */
+}
+
+@media (max-width: 1641px) {
+    .one-two__item-3 {
+        margin-left: -150px;
+    }
+
+    .one-two__item-3 {
+        margin-left: -150px;
+    }
+
+    .one__item-1 {
+        padding-left: 249px;
+    }
+
+    .one__item-3 {
+        padding-left: 250px;
+    }
+}
+
+/*1402*/
+@media (max-width: 1402px) {
+    .one__img {
+        max-width: 800px;
+        width: 100%;
+        min-height: 843px;
+        padding-top: 254px;
+    }
+
+    .preloader {
+        height: 89vh;
+    }
+
+    .parallax {
+        height: 88vh;
+    }
+
+    .one-two__item-2 {
+        margin-left: -200px;
+    }
+
+    .one__list-items {
+        max-width: 120px;
+        padding-left: 20px;
+    }
+
+    .one__item-1 {
+        padding-left: 191px;
+    }
+
+    .preloader {
+        display: none;
+    }
+}
+
+@media (max-width: 934px) {
+    .one__img {
+        max-width: 626px;
+        min-height: 717px;
+        padding-top: 405px;
+    }
+
+    .one__item-2 {
+        transform: translate(130px, 10px);
+    }
+
+    .one__list-items {
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+
+    .one__item-3 {
+        padding-left: 20px;
+        transform: translate(390px, -44px);
+    }
+
+    .one-two__list-items {
+        padding-top: 0px;
+    }
+
+    .one-two__item-1 {
+        margin-bottom: 20px;
+    }
+
+    .one-two__item-2 {
+        margin-bottom: 60px;
+    }
+
+    .one__item-2 {
+        margin-bottom: 41px;
+
+    }
+
+    .one-two__item-3 {
+        margin-left: -332px;
+    }
+
+    .one__list-items {
+        max-width: 55px;
+    }
+}
+
+@media (max-width: 624px) {
+    .one__img {
+        min-height: 567px;
+        padding-top: 612px;
+    }
+
+    .one__item-1 {
+        padding-left: 47px;
+    }
+
+    .one__item-3 {
+        padding-left: 20px;
+        transform: translate(259px, -5px);
+    }
+
+    .one-two__item-1 {
+        margin-left: -135px;
+    }
 }
