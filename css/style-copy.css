@@ -484,10 +484,9 @@ h4 {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 1920px;
     width: 100%;
     /* Немного больше, чтобы не было черных краев */
-    min-height: 1080px;
+    height: 100vh;
     background: url("/img/Фон_FlyRug.jpg") no-repeat center center;
     background-size: cover;
     transition: transform 0.1s linear;

@@ -659,5 +659,26 @@ document.querySelector('.ellipse__orange').addEventListener('click', function ()
         }
     });
 
+    const flowerSelectors = [
+        ".center-flower-1-1",
+        ".center-flower-1-5",
+        ".center-flower-1-6",
+        ".center-flower-1-9",
+        ".center-flower-1-10",
+        ".center-flower-1-15",
+        ".center-flower-1-17",
+        ".center-flower-1-21",
+        ".center-flower-1-22",
+        ".center-flower-1-25",
+        ".center-flower-1-26",
+        ".center-flower-1-30"
+      ];
+
+      flowerSelectors.forEach(selector => {
+        const el = document.querySelector(selector);
+        if (el) {
+          el.classList.add("flower-animate");
+        }
+      });
 
 });
