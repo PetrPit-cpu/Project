@@ -41,29 +41,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    //для скрытия прелоадера и параллакса:
+    // Получаем элементы
     const preloader = document.querySelector(".preloader");
     const images = document.querySelectorAll(".preloader-img");
 
-    // Функция для удаления прелоадера после загрузки страницы
-    function hidePreloader() {
-        images.forEach(img => {
-            const direction = img.classList.contains("preloader-top-left") ? "-500px, -500px" :
-                              img.classList.contains("preloader-top-center") ? "0px, -500px" :
-                              img.classList.contains("preloader-top-right") ? "500px, -500px" :
-                              img.classList.contains("preloader-bottom-left") ? "-500px, 500px" :
-                              img.classList.contains("preloader-bottom-center") ? "0px, 500px" :
-                              "500px, 500px";
+    let imagesHidden = 0; // Счётчик для скрытых изображений
 
-            img.style.transform = `translate(${direction})`;
-        });
+    // Функция для скрытия отдельного изображения
+    function hideImage(img) {
+        const direction =
+            img.classList.contains("preloader-top-left") ? "-500px, -500px" :
+                img.classList.contains("preloader-top-center") ? "0px, -500px" :
+                    img.classList.contains("preloader-top-right") ? "500px, -500px" :
+                        img.classList.contains("preloader-bottom-left") ? "-500px, 500px" :
+                            img.classList.contains("preloader-bottom-center") ? "0px, 500px" :
+                                "500px, 500px";
 
-        setTimeout(() => {
-            preloader.classList.add("hidden"); // Плавно скрываем прелоадер
-        }, 1500);
+        img.style.transform = `translate(${direction})`;
+        img.style.pointerEvents = "none"; // Чтобы повторно не кликали
+
+        imagesHidden++;
+
+        // После ухода всех 6 изображений — скрываем прелоадер
+        if (imagesHidden === images.length) {
+            setTimeout(() => {
+                preloader.classList.add("hidden");
+            }, 1500);
+        }
     }
 
-    // Запускаем скрытие прелоадера после загрузки контента
-    window.addEventListener("load", hidePreloader);
+    // Навешиваем обработчики клика на каждое изображение
+    images.forEach(img => {
+        img.addEventListener("click", () => hideImage(img));
+    });
+
 
 });
